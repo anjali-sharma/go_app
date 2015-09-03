@@ -23,7 +23,7 @@ func fetchFromRedis(db *sql.DB, client *goredis.Redis) {
 }
 
 func storeinDB(db *sql.DB, reply string) {
-	stmtIns, err := db.Prepare("INSERT INTO device_info (payload, created_at) VALUES(?, CURRENT_TIMESTAMP)") // ? = placeholder
+	stmtIns, err := db.Prepare("INSERT INTO device_info (payload, created_at) VALUES(?, CURRENT_TIMESTAMP)")
 
 	if err != nil {
     fmt.Println() 

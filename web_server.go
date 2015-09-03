@@ -95,29 +95,6 @@ func main() {
 	
 	db, _ := sql.Open("mysql", "root:@/go_db")
 
-  /*
-	stmtOut, err := db.Prepare("SELECT (payload) FROM device_info")
-	if err != nil {
-    fmt.Println(err) // proper error handling instead of panic in your app
-  }
-  defer stmtOut.Close()
-
-  rows, _ := stmtOut.Query()
-  */
   write2html(db)
-        
-
-
-   
-
-/*
-  for rows.Next() {
-  	var payload string
-  	//var id int 
-  	//rows.Scan(&id)
-  	rows.Scan(&payload)
-  	fmt.Println("The payload at index is ", payload)
-  }  */
-
 
 }
